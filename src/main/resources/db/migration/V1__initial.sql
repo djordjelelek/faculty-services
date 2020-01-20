@@ -1,0 +1,4 @@
+CREATE TABLE student(
+	im BIGINT PRIMARY KEY NOT NULL,
+	kurac VARCHAR(255)
+);
