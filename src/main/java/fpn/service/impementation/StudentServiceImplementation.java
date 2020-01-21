@@ -24,7 +24,7 @@ public class StudentServiceImplementation implements StudentService{
 	}
 
 //	@Override
-//	public void insertClient(@Valid Student student) {
+//	public void insertClient(@Valid Student1 student) {
 //		studentRepository.save(student);
 //		
 //	}
