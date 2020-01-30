@@ -3,7 +3,6 @@ CREATE TABLE student(
 	name VARCHAR(255),
 	surname VARCHAR(255),
 	status VARCHAR(255),
-	sex VARCHAR(255),
 	year INTEGER,
 	budget BOOLEAN
 );
@@ -12,7 +11,6 @@ CREATE TABLE professor(
 	name VARCHAR(255),
 	surname VARCHAR(255),
 	status VARCHAR(255),
-	sex VARCHAR(255),
 	sallary REAL
 );
 CREATE TABLE exam(
@@ -20,8 +18,8 @@ CREATE TABLE exam(
 	name VARCHAR(255),
 	professor_id UUID not null references professor(id)
 );
-CREATE TABLE professor_exam (
-   professor_id UUID references professor(id),
+CREATE TABLE student_exam (
+   student_id UUID references student(id),
    exam_id UUID references exam(id),
-   PRIMARY KEY(professor_id, exam_id)
+   PRIMARY KEY(student_id, exam_id)
 );
