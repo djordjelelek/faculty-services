@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +25,7 @@ import lombok.Setter;
 public class Professor extends Human{
 	@Column (name = "sallary")
 	private float sallary;
-	@OneToMany(mappedBy = "professor", fetch = FetchType.LAZY)
+	@JsonIgnore
+	@OneToMany(mappedBy = "professor", fetch = FetchType.EAGER)
 	private List<Exam> exams;
 }

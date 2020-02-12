@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -29,8 +31,14 @@ public class Student extends Human {
 	private int year;
 	@Column(name = "budget")
 	private boolean budget;
-
-	@ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
+	
+	@JsonIgnore
+	@ManyToMany(mappedBy = "students", fetch = FetchType.EAGER)
 	private List<Exam> exams;
+	
+	
+	public void addExam(Exam exam){
+		exams.add(exam);
+	}
 
 }

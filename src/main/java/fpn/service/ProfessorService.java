@@ -4,14 +4,11 @@ import java.util.List;
 import java.util.UUID;
 
 import fpn.entity.Exam;
-import fpn.entity.Student;
+import fpn.entity.Professor;
 
+public interface ProfessorService {
 
-
-
-public interface StudentService {
-
-	Student getStudent(UUID indexNumber);
+	Professor getProfessor(UUID id);
 
 	List<Exam> getExams(UUID id);
 

@@ -19,4 +19,6 @@ public interface AdminService {
 
 	void saveExamStudent(UUID idStudent, UUID idExam);
 
+	Exam getExam(UUID idExam);
+
 }

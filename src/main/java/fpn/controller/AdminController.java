@@ -38,11 +38,19 @@ public class AdminController {
 		return exam;
 	}
 	@RequestMapping (value = "/exam/student/{id_student}/{id_exam}", method = RequestMethod.POST)
-	public String saveExamStudent(@PathVariable("id_student") UUID idStudent, @PathVariable("id_exam") UUID idExam) {
+	public String addExamStudent(@PathVariable("id_student") UUID idStudent, @PathVariable("id_exam") UUID idExam) {
 		adminService.saveExamStudent(idStudent, idExam);
 		return "Sucessful post exam on student account";
 	}
+	@RequestMapping (value = "/exam/{id_exam}", method = RequestMethod.GET)
+	public Exam getExam(@PathVariable("id_exam") UUID idExam) {
+		Exam exam = adminService.getExam(idExam);
+		return exam;
+	}
 	
+	//delete student, exam, professor, student exam, professor exam; 
+	//PUT exam professor, put exam student, put student professor
+	//get exam (all), student, professor
 	
 	
 }

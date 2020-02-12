@@ -1,6 +1,6 @@
 package fpn.service.impementation;
 
-import java.util.List;
+
 import java.util.UUID;
 
 import javax.validation.Valid;
@@ -45,12 +45,17 @@ public class AdminServiceImpl implements AdminService{
 	@Override
 	public void saveExamStudent(UUID idStudent, UUID idExam) {
 		Student student = studentRepository.findById(idStudent).get();
-		List<Exam> examList = student.getExams();
 		Exam exam = examRepository.findById(idExam).get();
-		examList.add(exam);
-		student.setExams(examList);
+		
+		student.getExams().add(exam);	
 		studentRepository.save(student);
 		
+	}
+
+	@Override
+	public Exam getExam(UUID idExam) {
+		Exam exam = examRepository.findById(idExam).get();
+		return exam;
 	}
 
 }
