@@ -26,6 +26,6 @@ public class Professor extends Human{
 	@Column (name = "sallary")
 	private float sallary;
 	@JsonIgnore
-	@OneToMany(mappedBy = "professor", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy = "professor", fetch = FetchType.LAZY)
 	private List<Exam> exams;
 }

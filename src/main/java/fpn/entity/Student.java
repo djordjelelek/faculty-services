@@ -33,7 +33,7 @@ public class Student extends Human {
 	private boolean budget;
 	
 	@JsonIgnore
-	@ManyToMany(mappedBy = "students", fetch = FetchType.EAGER)
+	@ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
 	private List<Exam> exams;
 	
 	
