@@ -12,4 +12,8 @@ public interface AdminServiceExam {
 
 	Exam getExam(UUID idExam);
 
+	void saveExamStudent(UUID idStudent, UUID idExam);
+
+	void deleteExamStudent(UUID idStudent, UUID idExam);
+
 }

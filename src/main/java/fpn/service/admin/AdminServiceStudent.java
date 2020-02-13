@@ -16,11 +16,7 @@ public interface AdminServiceStudent {
 
 	List<Exam> getExamsStudents(UUID indexNumber);
 
-	void saveExamStudent(UUID idStudent, UUID idExam);
-
 	String deleteStudent(UUID indexNumber);
-
-	void deleteExamStudent(UUID idStudent, UUID idExam);
 
 	void updateStudent(@Valid Student student);
 
