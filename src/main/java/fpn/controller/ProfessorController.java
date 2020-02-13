@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fpn.entity.Exam;
 import fpn.entity.Professor;
-import fpn.service.ProfessorService;
+import fpn.service.student_professor.ProfessorService;
 
 
 

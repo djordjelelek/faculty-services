@@ -1,4 +1,4 @@
-package fpn.service;
+package fpn.service.student_professor;
 
 import java.util.List;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package fpn.service.impementation;
+package fpn.service.student_professor.implementation;
 
 import java.util.List;
 import java.util.UUID;
@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import fpn.entity.Exam;
 import fpn.entity.Professor;
 import fpn.repository.ProfessorRepository;
-import fpn.service.ProfessorService;
+import fpn.service.student_professor.ProfessorService;
 
 @Service
 public class ProfessorServiceImpl implements ProfessorService{
