@@ -47,7 +47,7 @@ public class AdminConStudent {
 		return student;
 	}
 	
-	@RequestMapping (value = "/admin/delete_student/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/admin/delete_student/{id}", method = RequestMethod.DELETE)
 	public String deleteStudent(@PathVariable("id") UUID indexNumber) {
 		String answer = adminServiceStudent.deleteStudent(indexNumber);
 		return answer;
