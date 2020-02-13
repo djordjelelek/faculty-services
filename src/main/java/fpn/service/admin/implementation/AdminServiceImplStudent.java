@@ -8,7 +8,6 @@ import javax.validation.Valid;
 import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import fpn.entity.Exam;
 import fpn.entity.Student;
@@ -17,7 +16,6 @@ import fpn.repository.StudentRepository;
 import fpn.service.admin.AdminServiceStudent;
 
 @Service
-@Transactional
 public class AdminServiceImplStudent implements AdminServiceStudent{
 	
 	@Autowired

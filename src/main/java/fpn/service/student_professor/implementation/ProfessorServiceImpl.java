@@ -24,9 +24,9 @@ public class ProfessorServiceImpl implements ProfessorService{
 
 	@Override
 	public List<Exam> getExams(UUID id) {
-		Professor professor = professorRepository.getOne(id);
-		List<Exam> examList = professor.getExams();
-		return examList;
+		Professor professor = professorRepository.findById(id).get();
+		professor.getExams().size();
+		return professor.getExams();
 	}
 
 }

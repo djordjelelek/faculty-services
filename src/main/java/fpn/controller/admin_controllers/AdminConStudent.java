@@ -18,7 +18,6 @@ import fpn.entity.Student;
 import fpn.service.admin.AdminServiceStudent;
 
 @RestController
-@Transactional
 public class AdminConStudent {
 	
 	@Autowired
@@ -41,6 +40,7 @@ public class AdminConStudent {
 		adminServiceStudent.saveStudent(student);
 		return student;
 	}
+	@Transactional
 	@RequestMapping (value = "/admin/exam/student/{id_student}/{id_exam}", method = RequestMethod.POST)
 	public String addExamStudent(@PathVariable("id_student") UUID idStudent, @PathVariable("id_exam") UUID idExam) {
 		adminServiceStudent.saveExamStudent(idStudent, idExam);
