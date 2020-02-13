@@ -2,6 +2,7 @@ package fpn.entity;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -33,7 +34,7 @@ public class Student extends Human {
 	private boolean budget;
 	
 	@JsonIgnore
-	@ManyToMany(mappedBy = "students", fetch = FetchType.LAZY)
+	@ManyToMany(mappedBy = "students", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Exam> exams;
 	
 	

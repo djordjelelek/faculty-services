@@ -31,10 +31,6 @@ public class AdminConExam {
 		Exam exam = adminServiceExam.getExam(idExam);
 		return exam;
 	}
-	@RequestMapping (value = "/admin/save_exam", method = RequestMethod.POST)
-	public Exam savexExam(@RequestBody @Valid Exam exam) {
-		adminServiceExam.saveExam(exam);
-		return exam;
-	}
+	
 	
 }
